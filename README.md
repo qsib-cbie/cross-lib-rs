@@ -162,6 +162,7 @@ target_link_options(app PUBLIC "-Wl,--allow-multiple-definition")
 ```
 5. Include the `greetings.h` in `main.cpp` and use the interface:
 ```
+// Include greetings as C, may need extern "C" for C++
 rust_init();
 char* greeting = rust_greeting("Zephyr");
 LOG_INF("Rust says '%s'", log_strdup(greeting));
